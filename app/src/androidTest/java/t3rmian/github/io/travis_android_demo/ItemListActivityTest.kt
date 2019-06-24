@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
 import androidx.test.rule.ActivityTestRule
 import androidx.test.uiautomator.By
@@ -14,9 +15,10 @@ import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.RuleChain
+import org.junit.runner.RunWith
 import t3rmian.github.io.travis_android_demo.common.ScreenshotOnTestFailedRule
 
-
+@RunWith(AndroidJUnit4::class)
 class ItemListActivityTest {
     companion object {
         const val PACKAGE_NAME = "t3rmian.github.io.travis_android_demo";

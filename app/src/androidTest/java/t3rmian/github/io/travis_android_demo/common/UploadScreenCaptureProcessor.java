@@ -18,8 +18,8 @@ public class UploadScreenCaptureProcessor implements ScreenCaptureProcessor {
 
     @Override
     public String process(ScreenCapture capture) throws IOException {
-        byte[] imageDate = getImageData(capture);
-        Call<ResponseBody> call = uploadImageData(capture, imageDate);
+        byte[] imageData = getImageData(capture);
+        Call<ResponseBody> call = uploadImageData(capture, imageData);
         Response<ResponseBody> response = call.execute();
         ResponseBody body = response.isSuccessful() ? response.body() : response.errorBody();
         String result = getResult(response, body);
